@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div color Changng</title>
+</head>
+
+<body>
+
+
+
+    <style>
+        
+        body {
+            background-color: #60900e;
+            color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            transition: 0.5s;
+        }
+
+        button{
+            border: 1px dashed  #F5F5F5;
+            background-color: transparent;
+            color: antiquewhite;
+            padding:10px;
+            transition: 0.2s;
+            margin: 5px;
+
+        }
+        button:hover{
+            background-color: #F5F5F5;
+            color: #60900e;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        img{
+            width: 100%;
+            max-height: 300px;
+            border-radius: 15px;
+        }
+       
+      @keyframes move {
+            from { transform: translate(0, 0); }
+            to { transform: translate(100px, 100px); }
+        }
+
+
+
+    </style>
+
+    
+        <h1>DOM Manipulation</h1>
+
+
+        <div class="" style="max-width: 500px;">
+        
+            <div class="" style="text-align: center;">
+                <button id="button1" >Change body <b>background color</b></button>
+                <button id="button2" >Change Image </button>
+                <button id="button3" >Change text  <b>color buttons</b></button>
+                <button id="button4" >Animation <b>div</b></button>
+            </div>
+        
+            <div id="animate" style="animation: 1s ease 0s 3 normal none running mynewmove;">
+                <img id="image" src="https://t4.ftcdn.net/jpg/01/35/22/61/240_F_135226109_p71fSAQ7VR7Gh1qhffdoE7upzIafRKp6.jpg" alt="">
+            </div>
+        </div>
+    
+
+
+
+
+    <script>
+
+        document.getElementById("button1")
+        document.getElementById("button2") 
+        document.getElementById("button3") 
+        document.getElementById("button4") 
+        
+        console.log(document.getElementById("button1"))
+        console.log(document.getElementById("button2"))
+        console.log(document.getElementById("button3"))
+        console.log(document.getElementById("button4"))
+        
+        const button1 = document.getElementById("button1");
+        const button2 = document.getElementById("button2");
+        const button3 = document.getElementById("button3");
+        const button4 = document.getElementById("button4");
+
+        document.getElementById("image")
+        console.log(document.getElementById("image"))
+        const image=document.getElementById("image");
+
+        document.getElementById("button3");
+        console.log(document.getElementById("button3"))
+        const color = document.getElementById("button3");
+
+        document.getElementById("animate")
+        console.log(document.getElementById("animate"))
+        const animate=document.getElementById("animate");
+
+
+
+        button1.addEventListener("click",function () {
+            document.body.style.backgroundColor="burlywood";
+        }) 
+
+        button2.addEventListener("click",function () {
+            image.src = 'https://t3.ftcdn.net/jpg/01/20/74/06/240_F_120740651_lVHGRtP6DkuyerUwffbHVRAXhDvt5sXg.jpg'
+        }) 
+
+        button3.addEventListener("click",function () {
+            color.style.color="black";
+        }) 
+        button4.addEventListener("click",function () {
+            animate.style.animation="move 5s 3";
+        }) 
+
+
+        
+
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- button4.addEventListener("click", function(){
+animate.style.animation = "mynewmove 1s 3";
+}) -->
+
+
+
+
+
+
+
+
